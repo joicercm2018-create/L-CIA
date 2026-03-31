@@ -66,7 +66,10 @@ const slides = [
     type: 'hero',
     title: "Inclusão é Prática",
     subtitle: "Obrigada!",
-    footer: "WhatsApp: 73 9 9113-2414 | Lattes disponível"
+    links: [
+      { label: "WhatsApp", url: "https://wa.me/5573991132414" },
+      { label: "Currículo Lattes", url: "https://wwws.cnpq.br/cvlattesweb/PKG_MENU.menu?f_cod=8AA7724714EE6B4F7F452724C4FBE201#" }
+    ]
   }
 ];
 
@@ -103,7 +106,15 @@ export default function App() {
                   {slides[currentSlide].title}
                 </h1>
                 <p className="text-2xl text-stone-400 font-light">{slides[currentSlide].subtitle}</p>
-                <div className="text-stone-600 font-mono text-sm pt-8">{slides[currentSlide].footer}</div>
+                {slides[currentSlide].links && (
+                  <div className="flex justify-center gap-6 pt-8">
+                    {slides[currentSlide].links.map((link, i) => (
+                      <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-stone-300 hover:text-stone-50 transition-colors font-mono text-sm border-b border-stone-700 pb-1">
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 
