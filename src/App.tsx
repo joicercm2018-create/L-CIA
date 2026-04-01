@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'motion/react';
 const slides = [
   {
     type: 'hero',
-    title: "Educação Física Inclusiva",
-    subtitle: "Estratégias de alta performance para TEA e TDAH",
+    title: "Educação Física Inclusiva na Prática",
+    subtitle: "PROPOSTA DE CURSO / OFICINA | Estratégias para atuação com alunos com TEA e TDAH no contexto escolar",
     footer: "Lécia Silva Santos | CREF 007742-G/BA"
   },
   {
